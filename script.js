@@ -78,8 +78,7 @@ function decCoin(){
     else{
         alert('আপনার পর্যাপ্ত কয়েন নেই!কল করতে কমপক্ষে 20 টি কয়েক লাগবে।')
     }
-    return
-
+    
 }
 
 
@@ -106,25 +105,7 @@ document.getElementById("call-btn").addEventListener('click', function(){
      ShowAlert('serviceName', 'serviceNumber')
      decCoin()
     
-    
-    // const coin2 = document.getElementById('coin-balance')
 
-    // let coin1 = parseInt(coin2.innerText);
-
-    // let newCoin = coin1 - 20
-
-    // coin2.innerHTML = newCoin
-
-    // if(newCoin < 0 ){
-    //     alert('আপনার পর্যাপ্ত কয়েন নেই!কল করতে কমপক্ষে 20 টি কয়েক লাগবে।')
-
-
-    // } 
-    
-    
-    
-
- 
     
 })
 
@@ -135,27 +116,79 @@ document.getElementById("police-btn").addEventListener('click', function(){
     ShowAlert('serviceName1', 'serviceNumber2')
 
 
-    if(coin1 =0 ){
-        alert('আপনার পর্যাপ্ত কয়েন নেই!কল করতে কমপক্ষে 20 টি কয়েক লাগবে।')
-    }
-   
-
-    let coin1 = parseInt(coin2.innerText);
-
-    let newCoin = coin1 -20
-
-    coin2.innerHTML = newCoin
-
-    
-
-
-    
-
+    decCoin()
 
     
     
+})
+document.getElementById("fair-btn").addEventListener('click', function(){
 
- 
+    ShowAlert('fire-service', 'fire-number')
+
+
+    decCoin()
+
+    
+    
+})
+document.getElementById("ambulance-btn").addEventListener('click', function(){
+
+    ShowAlert('ambulance-service', 'ambulance-number')
+
+
+    decCoin()
+
+    
+    
+})
+document.getElementById("women-btn").addEventListener('click', function(){
+
+    ShowAlert('women-service', 'women-number')
+
+
+    decCoin()
+
+    
+    
+})
+document.getElementById("corruption-btn").addEventListener('click', function(){
+
+    ShowAlert('electricity-service', 'electricity-number')
+
+
+    decCoin()
+
+    
+    
+})
+document.getElementById("electricity-btn").addEventListener('click', function(){
+
+    ShowAlert('corruption-service', 'corruption-number')
+
+
+    decCoin()
+
+    
+    
+})
+document.getElementById("brac-btn").addEventListener('click', function(){
+
+    ShowAlert('brac-service', 'brac-numbber')
+
+
+    decCoin()
+
+    
+    
+})
+document.getElementById("railway-btn").addEventListener('click', function(){
+
+    ShowAlert('railway-service', 'railway-number')
+
+
+    decCoin()
+
+    
     
 })
 
