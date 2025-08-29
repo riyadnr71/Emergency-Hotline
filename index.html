@@ -25,14 +25,14 @@
 
 <body class="max-w-[1440px] mx-auto">
 
-    <div class="flex justify-between items-center p-4">
+    <div class="flex justify-between md:flex flex-row-2 items-center p-4">
         <div class="flex items-center space-x-2">
             <div class="w-15 h-15"><img src="./assets/logo.png" alt=""></div>
             <span class="font-semibold text-2xl text-[#006747]">Emergency <br>Service</span>
         </div>
 
-        <div class="flex items-center gap-5 ">
-            <div class="flex items-center space-x-1 p-2 rounded-full bg-green-100  ">
+        <div class="flex flex-wrap items-center justify-center md:justify-end gap-2 ">
+            <div class="flex items-center space-x-1 p-2 rounded-full bg-green-100 ">
                 <span id="countheart">0</span>
                 <span><img class="max-h-[20px] max-w-[50px]" src="./assets/heart.png" alt=""></span>
 
@@ -45,8 +45,8 @@
             </div>
 
             <div class="bg-green-600 text-white font-bold py-2 px-4 rounded-full">
-                <span>0</span>
-                <span>Copy</span>
+                <span id="copyCount">0</span>
+                <span >Copy</span>
             </div>
         </div>
     </div>
@@ -58,7 +58,7 @@
         <div class="text-content">
             <p class="title text-white text-3xl mb-5">জরুরি সেবা ডিরেক্টরি</p>
             <p class="subtitle text-white">Government Emergency Services at Your Fingertip – A Project by Government of
-                the People’s Republic of Bangladesh</p>
+                the People's Republic of Bangladesh</p>
         </div>
     </div>
 
@@ -81,7 +81,7 @@
                     </div>
 
                     <div class="text-3xl font-bold">
-                        <h1 id="serviceNumber">999</h1>
+                        <h1 id="serviceNumber"> 999</h1>
 
                     </div>
                     <div class="bg-gray-300 max-w-[100px] p-3 rounded-2xl my-5 ">
@@ -89,7 +89,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="call-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -119,7 +119,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy1" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="police-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -149,7 +149,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy2" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="fair-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -157,15 +157,25 @@
 
                 </div>
             </div>
+            <!-- History  -->
+            <div class="md:col-span-1 lg:row-span-4 bg-white rounded-2xl p-3">
 
-            <div class="md:col-span-1 lg:row-span-4 bg-white rounded-2xl">
-
-                <div class="flex justify-between items-center p-3">
+                <div class="flex justify-between items-center ">
                     <h2><i class="fa-solid fa-clock-rotate-left"></i> <span class="font-bold">Call History</span></h2>
                     <button class="rounded-3xl btn btn-success w-[100px]">Clear</button>
 
                 </div>
+                <div id="history-btn">
+                    <div class=" bg-white shadow-lg shadow-black-100 rounded-xl p-3 my-5 flex justify-between items-center">
+                    <div>
+                        <h1 class="font-bold">জাতীয় জরুরি সেবা</h1>
+                    <p>999</p>
+                    </div>
+                    <div><p>11:36:58 AM</p></div>
+                    
+                </div>
 
+                </div>
 
             </div>
 
@@ -196,7 +206,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy3" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="ambulance-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -226,7 +236,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy4" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="women-btn" class="btn btn-success min-w-[100px]">Call</button>
                     </div>
 
@@ -256,7 +266,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy5" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="corruption-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -286,7 +296,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy6"  class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="electricity-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -316,7 +326,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy7" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="brac-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -331,9 +341,10 @@
                         <span class="text-4xl text-gray-500"><i id="heart8" class="fa-regular fa-heart"></i></span>
                     </div>
 
-                    <div class="my-5">
+                    <div class="my-5 fw">
                         <h1 class="text-2xl font-bold">বাংলাদেশ রেলওয়ে</h1>
                         <p id="railway-service">Bangladesh Railway
+                        
                     </div>
 
                     <div class="text-3xl font-bold">
@@ -345,7 +356,7 @@
                     </div>
 
                     <div class="flex justify-between">
-                        <button class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
+                        <button id="copy8" class="btn"><i class="fa-solid fa-copy"></i> Copy</button>
                         <button id="railway-btn" class="btn btn-success w-[100px]">Call</button>
                     </div>
 
@@ -357,7 +368,7 @@
         </div>
 
     </section>
-    <i id="icon" class="fa-solid fa-phone-volume"></i>
+    
 
 
     <script src="./script.js"></script>
