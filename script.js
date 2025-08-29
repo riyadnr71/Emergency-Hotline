@@ -236,12 +236,14 @@ document.getElementById("ambulance-btn").addEventListener('click', function(){
 });
 
 
-document.getElementById("women-btn").addEventListener('click', function(){
 
-    ShowAlert('awomen-service', 'women-number');
+document.getElementById('women').addEventListener('click', function(){
+    
+
+    ShowAlert('corruption-service','women-number');
      
     
-    Calling('Women & Child Helpline', '109')
+    Calling('নারী ও শিশু সহায়তা', '109')
      
      historyShow()
   
@@ -249,17 +251,22 @@ document.getElementById("women-btn").addEventListener('click', function(){
 });
 
 
-document.getElementById("corruption-btn").addEventListener('click', function(){
+document.getElementById("corruption").addEventListener('click', function(){
 
-    ShowAlert('awomen-service', 'women-number');
+
+    ShowAlert('corruption-service','corruption-number');
      
-    
-    Calling('Women & Child Helpline', '109')
+    Calling('দুদক', '106')
      
      historyShow()
   
 
 });
+
+
+
+
+
 
 
 
@@ -278,18 +285,15 @@ document.getElementById("corruption-btn").addEventListener('click', function(){
 
 document.getElementById("electricity-btn").addEventListener('click', function(){
 
-   
 
-
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
     
-    if(coinBalance >= 20) {
          ShowAlert('electricity-service', 'electricity-number')
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
 
+          Calling('বিদ্যুৎ বিভ্রাট', '16216')
+     
+     historyShow()
+       
+  
     
     
 })
@@ -303,15 +307,15 @@ document.getElementById("brac-btn").addEventListener('click', function(){
     
 
 
-   const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
-    
-    if(coinBalance >= 20) {
-         ShowAlert('brac-service', 'brac-numbber')
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
+   
 
+         ShowAlert('brac-service', 'brac-numbber')
+
+
+         Calling('ব্র্যাক', '16445')
+     
+     historyShow()
+    
     
     
 })
@@ -323,17 +327,26 @@ document.getElementById("railway-btn").addEventListener('click', function(){
    
 
 
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
     
-    if(coinBalance >= 20) {
           ShowAlert('railway-service', 'railway-number')
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
+
+           Calling('বাংলাদেশ রেলওয়ে', '163')
+     
+     historyShow()
+
 
     
     
+})
+
+
+
+
+document.getElementById('clear').addEventListener('click', function(){
+
+  const inner  = document.getElementById('"history-btn"')
+
+  inner.innerHTML = ''
 })
 
 
