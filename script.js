@@ -1,5 +1,5 @@
 
-const historyData = []
+const historyData= []
 
 
 const  clickCopy = document.getElementById('copyCount')
@@ -118,61 +118,76 @@ function decCoin(){
 
 
 
-    
 
 
+// history function?
 
+function historyShow(){
 
-
-    
-
-
-
-    
-
-
-
-
-
-// document.getElementById("call-btn").addEventListener('click', function(){
-
-
-//      ShowAlert('serviceName', 'serviceNumber')
-//      decCoin()
-
-//      const data = {
-//         name : 'জাতীয় জরুরি সেবা',
-//         Number: '999',
-//         date : new Date().toLocaleTimeString()
-
-//      }
-
-//      historyData.push(data)
-     
-//      const historyItem = document.createElement('div');
-//      historyItem.classList.add('history-item');
+    const historyContainer = document.getElementById('history-btn');
 
 
     
-// })
 
 
+historyContainer.innerHTML = '';
 
 
+    for (const historyItemData of historyData) {
+        const historyItem = document.createElement('div');
+        historyItem.innerHTML = `
+            <div class="bg-white shadow-lg shadow-black-100 rounded-xl p-3 my-5 flex justify-between items-center">
+                <div>
+                    <h1 class="font-bold">${historyItemData.name}</h1>
+                    <p>${historyItemData.Number}</p> 
+                </div>
+                <div>
+                    <p>${historyItemData.date}</p>
+                    
+                </div>
+            </div>
+        `;
+
+        historyContainer.appendChild(historyItem); 
+    }
+        
+}
 
 
+    
 
-document.getElementById("call-btn").addEventListener('click', function(){
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
+
+function Calling(id1, id2){
+
+     const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
     if(coinBalance >= 20) {
-        ShowAlert('serviceName', 'serviceNumber');
         decCoin();
+        const data = {
+        name : id1,
+        Number: id2,
+        date : new Date().toLocaleTimeString()
+
+     }
+
+     historyData.push(data)
+
     } else {
         alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
     }
+
+}
+
+document.getElementById("call-btn").addEventListener('click', function(){
+
+    ShowAlert('serviceName', 'serviceNumber');
+     
+    
+    Calling('জাতীয় জরুরি সেবা', '999')
+     
+     historyShow()
+  
+
 });
-
-
 
 
 
@@ -182,86 +197,85 @@ document.getElementById("call-btn").addEventListener('click', function(){
 
 document.getElementById("police-btn").addEventListener('click', function(){
 
-
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
-    if(coinBalance >= 20) {
-        ShowAlert('serviceName1', 'serviceNumber2');
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
-
+    ShowAlert('serviceName1', 'serviceNumber2');
+     
     
-    
-})
+    Calling('পুলিশ', '999')
+     
+     historyShow()
+  
+
+});
+
+
+
+
 document.getElementById("fair-btn").addEventListener('click', function(){
 
+    ShowAlert('fire-service', 'fire-number');
+     
     
+    Calling('ফায়ার সার্ভিস', '999')
+     
+     historyShow()
+  
+
+});
 
 
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
-    
-    if(coinBalance >= 20) {
-        ShowAlert('fire-service', 'fire-number')
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
-
-    
-    
-})
 document.getElementById("ambulance-btn").addEventListener('click', function(){
 
+    ShowAlert('ambulance-service', 'ambulance-number');
+     
     
+    Calling('অ্যাম্বুলেন্স', '1994-999999')
+     
+     historyShow()
+  
+
+});
 
 
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
-    
-    if(coinBalance >= 20) {
-        ShowAlert('ambulance-service', 'ambulance-number')
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
-
-    
-    
-})
 document.getElementById("women-btn").addEventListener('click', function(){
 
+    ShowAlert('awomen-service', 'women-number');
+     
     
+    Calling('Women & Child Helpline', '109')
+     
+     historyShow()
+  
+
+});
 
 
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
-    
-    if(coinBalance >= 20) {
-        ShowAlert('women-service', 'women-number')
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
-
-    
-    
-})
 document.getElementById("corruption-btn").addEventListener('click', function(){
 
+    ShowAlert('awomen-service', 'women-number');
+     
     
+    Calling('Women & Child Helpline', '109')
+     
+     historyShow()
+  
+
+});
 
 
-    const coinBalance = parseInt(document.getElementById('coin-balance').innerText);
-    
-    if(coinBalance >= 20) {
-        ShowAlert('corruption-service', 'corruption-number')
-        decCoin();
-    } else {
-        alert('❌ আপনার পর্যাপ্ত কয়েন নেই! কল করতে কমপক্ষে 20 টি কয়েন লাগবে।');
-    }
+
+
+
+
 
     
-    
-})
+ 
+
+
+
+
+
+
+
 document.getElementById("electricity-btn").addEventListener('click', function(){
 
    
@@ -279,6 +293,11 @@ document.getElementById("electricity-btn").addEventListener('click', function(){
     
     
 })
+
+
+
+
+
 document.getElementById("brac-btn").addEventListener('click', function(){
 
     
@@ -296,6 +315,9 @@ document.getElementById("brac-btn").addEventListener('click', function(){
     
     
 })
+
+
+
 document.getElementById("railway-btn").addEventListener('click', function(){
 
    
