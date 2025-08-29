@@ -342,12 +342,11 @@ document.getElementById("railway-btn").addEventListener('click', function(){
 
 
 
-document.getElementById('clear').addEventListener('click', function(){
 
-  const inner  = document.getElementById('"history-btn"')
 
-  inner.innerHTML = ''
-})
+
+
+
 
 
 
